@@ -37,7 +37,6 @@ while($o = mysql_fetch_object($r)){
 	$rank++;
 }	
 
-//	<td class='pairs_col'>".$o->pairs."</td>\
 
 
 ?>
