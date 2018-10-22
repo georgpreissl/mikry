@@ -1,2 +1,2 @@
 # mikry
-A memory-game using the Flickr JSONP API
+A basic memory-game using the Flickr JSONP API.
