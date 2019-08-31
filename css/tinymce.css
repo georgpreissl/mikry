@@ -1,0 +1,60 @@
+p {
+	font-size: 1rem;
+	color: var(--color-text);
+	margin-top: 0rem;
+	
+}
+.sm {
+	font-size: .8rem;
+	margin-bottom: .8rem;
+	
+}
+.md {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	
+}
+.lg {
+	font-size: 1.4rem;
+	margin-bottom: 1.2rem;
+	
+}
+.xl {
+	font-size: 2rem;
+	margin-bottom: 1.4rem;
+	
+}
+.xxl {
+	font-size: 3rem;
+	margin-bottom: 1.6rem;
+	
+}
+p.quote {
+	font-size: 2rem;
+	
+}
+span.highlight {
+	color: blue;
+	
+}
+span.underline {
+	position: relative;
+	
+}
+span.underline:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	bottom: 0rem;
+	height: 1px;
+	background-color: black;
+	left: 0rem;
+	text-decoration: underline;
+	right: 0rem;
+	
+}
+div.box {
+	background-color: rgba(169, 70, 70, 0.1);
+	padding: 1rem;
+}

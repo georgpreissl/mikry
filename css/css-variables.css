@@ -1,0 +1,11 @@
+:root {
+	--color1: orange; 
+	--color2: #f70;
+	--color-text: #999;
+	--color-link: #999;
+	--color-link-hover: #000;
+	--color-link-active: #000;
+	--color-pagination-active: #000;
+	--hl-font: 'Roboto', sans-serif;
+
+}

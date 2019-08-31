@@ -1,0 +1,33 @@
+.ce_form {
+	
+}
+.ce_form .submit {
+	width: 100%;
+	margin-top: 1rem;
+	
+}
+.ce_form .widget {
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column-reverse;
+	
+}
+.ce_form input[type='text'],
+.ce_form input[type='textarea'],
+.ce_form input[type='email'],
+.ce_form input[type='search'],
+.ce_form textarea {
+	display: block;
+	width: 100%;
+	border: none;
+	padding: 0.5rem;
+}
+.ce_form textarea {
+	resize: none;
+	min-height: 20rem;
+	
+}
+.ce_form label {
+	display: block;
+	margin-top: 0.4rem;
+}

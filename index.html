@@ -7,6 +7,10 @@
 	<title>MIKRY</title>
 
 	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel='stylesheet' type='text/css' href='css/css-variables.css'>
+	<link rel='stylesheet' type='text/css' href='css/buttons.css'>
+	<link rel='stylesheet' type='text/css' href='css/tinymce.css'>
+	<link rel='stylesheet' type='text/css' href='css/ce_form.css'>
 	<link rel='stylesheet' type='text/css' href='css/style.css'>
 
 
@@ -16,19 +20,24 @@
 
 		<section id='secIntro' >
 			<h1>Mik<span>ry</span></h1>
-			<form id='introForm' >			
-				<input class='inp' id='inpKeyword' name='term' placeholder='Cute Kittens'>
-				<label for='term'>Enter your Mikry-Keyword</label>
-
-				<div id="pairsCounter" class="cfix">
-					<button id='pairsPlus'></button>
-					<input class='inp' id='inpNrPairs' name='term' placeholder='6'>
-					<button id='pairsMinus'></button>
+			<form id='introForm' >
+				<div class="introform_field">
+					<div class="introform_field_input">
+						<input class='inp md' id='inpKeyword' name='term' placeholder='Cute Kittens' >
+					</div>
+					<label class="sm" for='term'>Enter your Mikry-Keyword</label>
 				</div>
-					<label for='term'>Enter the Number of Pairs</label>
-
-
-				<input class='button' id='start' type='submit' value='start'>
+				<div class="introform_field">
+					<div class="introform_field_input">
+						<div id="pairsCounter" class="cfix">
+							<button id='pairsPlus' class="md" ></button>
+							<input class='inp md' id='inpNrPairs' name='term' placeholder='6' >
+							<button id='pairsMinus' class="md" ></button>
+						</div>
+					</div>
+					<label class="sm" for='term'>Enter the Number of Pairs</label>
+				</div>
+				<input class='btn' id='start' type='submit' value='start'>
 			</form>
 		</section>
 
@@ -38,14 +47,21 @@
 		</section>
 	
 		<section id='secOutro' >
-			<h1 id='time' ><span id='sec' ></span></h1>
+			<h1 id='time' class="xl" >
+				<span id='sec' ></span>
+			</h1>
 			<p>... seconds for <span id='nrPairs' ></span> Pairs.</p>
 	
 			<form id='retryForm' >
-				<h2>Try again:</h2>	
-				<input  class='inp' id='inpKeywordAgain' name='term' value='Love 1'>
-				<label for='term'>Enter your Mikry-Keyword</label>
-				<input class='button'  id='try-again' type='button' value='retry'>
+				<p class="md">Try again:</p>
+				<div class="introform_field">
+					
+					<div class="introform_field_input">
+						<input class='inp md' id='inpKeywordAgain' name='term' value='Love 1'>
+					</div>
+				<label class="sm" for='term'>Enter your Mikry-Keyword</label>
+				</div>
+				<input class='btn md'  id='try-again' type='button' value='retry'>
 			</form>
 		</section>	
 
@@ -55,10 +71,10 @@
 			<h2>Mikry-Hall-of-Fame</h2>
 			<h4></h4>
 			<form id='scoreForm'>
-				<h2>Congratulations!<br>Submit your Score:</h2>
+				<p class="md" >Congratulations!<br>Submit your Score:</p>
 				<label for='player'>Your Name</label>
-				<input  class='inp' id='player' name='player' >
-				<input  class='button' id='submitScoreButton' type='submit' value='Submit'>			
+				<input class='inp' id='player' name='player' >
+				<input class='btn' id='submitScoreButton' type='submit' value='Submit'>			
 			</form>		
 			<table>
 				<tr>
@@ -74,13 +90,14 @@
 
 
 		<section id='hallOfFame' >
-		
+			Hall of Fame
 		</section>
-	
+
 	
 	</div>
 
 	<script src='js/jquery-latest.min.js'></script>
+	<script src='js/messenger.js'></script>
 	<script src='js/main.js'></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

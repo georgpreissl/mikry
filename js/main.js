@@ -1,5 +1,7 @@
 
-
+var messenger = new Messenger({
+	elParent:$('#wrap')
+});
 
 var boTouchstart = 'ontouchstart' in document.documentElement;
 //console.log('boTouchstart:',boTouchstart);
@@ -8,7 +10,6 @@ var arKeywords = ["cute kittens","unicorns","rainbow","flowers","puppies","funny
 var nrMaxPairs = 14;
 
 $secIntro = $('#secIntro');
-$title = $secIntro.find('h1');
 $secGame = $('#secGame');
 $cardsWrap = $secGame.find("#cardsWrap");
 $form = $secIntro.find('form');
@@ -42,7 +43,7 @@ $('#pairsPlus').click(function(e){
 	if(nrPairs<nrMaxPairs){
 		nrPairs++;
 	} else {
-		
+		messenger.show({msg:'You can play with a maximum number of '+nrMaxPairs+ ' pairs!'})
 	}
 	$('#inpNrPairs').val(nrPairs)
 })
@@ -53,7 +54,7 @@ $('#pairsMinus').click(function(e){
 	if(nrPairs>2){
 		nrPairs--;
 	} else {
-		
+		messenger.show({msg:'Are you kidding? Two pairs is the minimum.'})
 	}
 	$('#inpNrPairs').val(nrPairs)
 })
@@ -164,7 +165,7 @@ function loadFlickr(){
 	$loader = $('<div/>').attr('id','loader').appendTo($('body')).hide().fadeIn();
 
 	// load flickr-json and init
-	$.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?tags='+stKeyWord+'&tagmode=any&format=json&jsoncallback=?', init);
+	$.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?tags='+stKeyWord+'&tagmode=any&format=json&jsoncallback=?', init);
 	
 };
 
@@ -324,7 +325,7 @@ function startOutro(){
 	$('#secGame').hide();
 	$('#secOutro').show();
 	$('#inpKeywordAgain').val(stKeyWord);
-	//$('#hallOfFame').fadeIn();
+	// $('#hallOfFame').fadeIn();
 	endTime = new Date().getTime();
 	db('Var: ','endTime erstellt!');
 	ms = endTime-startTime;
